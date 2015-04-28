@@ -1,0 +1,72 @@
+#ifndef _DEFS_H
+#define _DEFS_H
+
+#include "Console.h"
+
+// GAME
+
+#define BACKGROUND_STATUS_COLOR FOREGROUND_INTENSITY
+
+#define WIN_STRING "YOU WIN!"
+#define LOSE_STRING "YOU LOSE!"
+#define RESTART_STRING "Restart (Y/N)?"
+
+#define ROW_GAMEOVER 12
+#define ROW_RESTART 13
+#define COL_GAMEOVER 35
+#define ROWS_FOR_STATUS 3
+#define BEGIN_STATUS_ROW 22
+#define PROTECTOR_LIFE_ROW 23
+#define NUM_SHIPS_ROW 24
+
+#define PROTECTOR_ROW 21
+#define PROTECTOR_COL 39
+
+#define TOTAL_COLS 80
+#define TOTAL_ROWS 25
+
+#define EMPTY_ROW "                                                                                "
+
+// 
+#define HIGH   80
+#define WIDTH  25
+
+// PROTECTOR
+
+#define PROTECTOR_CRAFT 0xC1
+#define PROTECTOR_COLOR FOREGROUND_GREEN
+#define PROTECTOR_MISSILE_SYMBOL 0xB3 // 0xA7
+#define PROTECTOR_MISSILE_COLOR FOREGROUND_CYAN
+
+#define PROTECTOR_SHIELD 5
+#define PROTECTOR_SPEED 40
+#define PROTECTOR_FIRE_FREQUENCY 2
+#define PROTECTOR_MISSILE_SPEED 60
+
+
+// ALIEN
+
+#define ALIEN_CRAFT 0xCE
+#define ALIEN_COLOR FOREGROUND_RED
+#define ALIEN_MISSILE_SYMBOL 0xCF
+#define ALIEN_MISSILE_COLOR FOREGROUND_RED
+
+#define ALIEN_SPEED 1.5
+#define ALIEN_SHIELD 1
+#define ALIEN_FIRE_FREQUENCY 0.5
+#define ALIEN_MISSILE_SPEED 40
+#define ALIEN_CREATION_FREQUENCY 0.4
+
+#define ALIEN_TOTAL_MAX 20
+
+
+enum Direction
+{
+	LEFT,
+	RIGHT,
+	UP,
+	DOWN
+};
+
+
+#endif
