@@ -24,8 +24,6 @@ public:
 	void fireAliens();
 	int remainingAliens();
 
-	void playProtectorMssile();
-
 	void detectMissile_x_Missile();
 	void detectMissile_x_Alien();
 	void detectMissile_x_Protector();

@@ -57,7 +57,7 @@ void Game::prepareStatusPanel()
 
 	char row2[81];
 	char row3[80];
-	sprintf(row2, " Vidas do Guardiao:                                   Naves Restantes:          \0", _ia->getProtector()->getShield());
+	sprintf(row2, " Vidas do Guardiao:                                   Naves Restantes:          \0");
 	sprintf(row3, "                                                                               \0");
 
 	paintString(BEGIN_STATUS_ROW, 0, EMPTY_ROW, BACKGROUND_INTENSITY | FOREGROUND_BLUE);
@@ -121,7 +121,7 @@ bool Game::paintRestart()
 	paintString(ROW_RESTART, COL_GAMEOVER, RESTART_STRING, FOREGROUND_CYAN);
 		
 	std::cin.clear();	
-	scanf("%1s", &c);
+	scanf("%1c", &c);
 	
 	if (c[0] == 'Y' || c[0] == 'y' || c[0] == 's')
 		return true;

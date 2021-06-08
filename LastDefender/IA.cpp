@@ -12,7 +12,9 @@ IA::IA(Game *g)
 	_player = new SoundPlayer();
 	_player->playMusic();
 
-	srand(time(NULL));	
+	srand(time(NULL));
+
+	reset();
 }
 
 void IA::reset()
@@ -20,7 +22,7 @@ void IA::reset()
 	_aliens_created = 0;
 	_aliens_destroyed = 0;
 
-	_time_last_alien_created = GetTickCount();
+	_time_last_alien_created = GetTickCount64();
 
 	_protector = new Protector(PROTECTOR_ROW, PROTECTOR_COL);	
 	
